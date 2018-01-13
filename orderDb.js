@@ -64,7 +64,7 @@ exports.orderDb = [
         quantity: '4'
       }
     ],
-    orderPlacementDate: 'December 30, 2017',
+    orderPlacementDate: 'January 13, 2017',
     value: '40 £',
     status: 'open',
     shipped: 'true',
@@ -89,7 +89,7 @@ exports.orderDb = [
         quantity: '5'
       }
     ],
-    orderPlacementDate: 'December 31, 2017',
+    orderPlacementDate: 'January 12, 2017',
     value: '90 £',
     status: 'open',
     shipped: 'false',
