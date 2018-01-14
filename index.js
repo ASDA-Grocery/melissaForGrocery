@@ -143,17 +143,17 @@ app.post('/enquireOrder', function(req, res) {
             var result;
             if(orderCost.indexOf('pounds') !== -1)
             {
-              result = orderCost.replace("pounds", "£");
+              result = orderCost.replace("dollars", "$");
               orderCost = result;
             }
-            else if(orderCost.indexOf('pound') !== -1 ){
-              result = orderCost.replace("pound", "£");
+            else if(orderCost.indexOf('dollar') !== -1 ){
+              result = orderCost.replace("dollar", "$");
               orderCost = result;
             }
 
-            if(orderCost.indexOf('£') == 0){
+            if(orderCost.indexOf('$') == 0){
               orderCost =  orderCost.substr(2, orderCost.length)
-              orderCost = orderCost + ' £'
+              orderCost = orderCost + ' $'
             }
 
             for(var i = 0; i < orderData.orderDb.length; i++){
@@ -327,12 +327,12 @@ app.post('/enquireOrder', function(req, res) {
             if(mineralContent === 'high'){
               speech = 'We have '+ countObj[keyArray[keyArray.length - 1]] + ' options with '
                         + keyArray[keyArray.length - 1] + ' grams and ' + countObj[keyArray[keyArray.length - 2]]
-                        + ' options with ' + keyArray[keyArray.length - 2]+ ' grams in each bar.'
+                        + ' options with ' + keyArray[keyArray.length - 2]+ ' grams in each bar. Which one do you want?'
             }
             else if(mineralContent === 'low'){
               speech = 'We have '+ countObj[keyArray[0]] + ' options with '
                         + keyArray[0] + ' grams and ' + countObj[keyArray[1]]
-                        + ' options with ' + keyArray[1] + ' grams in each bar.'
+                        + ' options with ' + keyArray[1] + ' grams in each bar. Which one do you want?'
             }
             else{
               speech = 'Sorry this level of content is not available.'
@@ -361,7 +361,7 @@ app.post('/enquireOrder', function(req, res) {
               var tempIndex = speech.lastIndexOf(',')
               if(tempIndex != -1){
                 var tempSpeech = speech.substr(0, tempIndex) + ' &' + speech.substr(tempIndex+1, speech.length-1)
-                speech = tempSpeech
+                speech = tempSpeech + ' You might like the chocolate flavor based on your past purchases.'
                 contextOut = [{"name":"initialcontent", "lifespan":5, "parameters":{'initialMineralType': mineralType}}]
               }
             }
