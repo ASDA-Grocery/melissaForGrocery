@@ -15,7 +15,7 @@ exports.orderDb = [
       }
     ],
     orderPlacementDate: 'January 9, 2018',
-    value: '20 £',
+    value: '20 $',
     status: 'closed',
     shipped: 'false',
     deliveryTime: getOrderTime(30)
@@ -35,7 +35,7 @@ exports.orderDb = [
       }
     ],
     orderPlacementDate: 'January 10, 2018',
-    value: '35 £',
+    value: '35 $',
     status: 'closed',
     shipped: 'false',
     deliveryTime: getOrderTime(40)
@@ -50,7 +50,7 @@ exports.orderDb = [
       }
     ],
     orderPlacementDate: 'January 11, 2018',
-    value: '15 £',
+    value: '15 $',
     status: 'closed',
     shipped: 'false',
     deliveryTime: getOrderTime(25)
@@ -65,7 +65,7 @@ exports.orderDb = [
       }
     ],
     orderPlacementDate: 'January 12, 2018',
-    value: '40 £',
+    value: '40 $',
     status: 'open',
     shipped: 'true',
     deliveryTime: getOrderTime(30)
@@ -90,7 +90,7 @@ exports.orderDb = [
       }
     ],
     orderPlacementDate: 'January 13, 2018',
-    value: '90 £',
+    value: '90 $',
     status: 'open',
     shipped: 'false',
     deliveryTime: getOrderTime(50)
