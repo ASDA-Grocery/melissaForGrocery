@@ -142,7 +142,7 @@ app.post('/enquireOrder', function(req, res) {
           else{
             var orderCounter = 0;
             var result;
-            if(orderCost.indexOf('sollars') !== -1)
+            if(orderCost.indexOf('dollars') !== -1)
             {
               result = orderCost.replace("dollars", "$");
               orderCost = result;
