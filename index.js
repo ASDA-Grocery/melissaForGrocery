@@ -48,6 +48,7 @@ app.post('/enquireOrder', function(req, res) {
         oauth2Client.setCredentials({
           access_token:accessToken
         });
+        console.log('access token --> ', accessToken)
 
         if(intent === 'checkOrderStatus'){
           console.log('Order Database :', orderData.orderDb);
