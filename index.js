@@ -523,7 +523,7 @@ app.post('/enquireOrder', function(req, res) {
                             responseToAPI(speech);
                         }
                         else{
-                            speech = 'As per your Google Calendar, you have '+event.summary+' from '+startTime+' to '+endTime+'. Would you like to pay 3 Pounds extra for guaranteed delivery by tomorrow 9 AM?'
+                            speech = 'As per your Google Calendar, you have '+event.summary+' from '+startTime+' to '+endTime+'. Would you like to pay 3 Dollars extra for guaranteed delivery by tomorrow 9 AM?'
                             responseToAPI(speech);
                         }
                     }
@@ -533,7 +533,7 @@ app.post('/enquireOrder', function(req, res) {
                             responseToAPI(speech);
                         }
                         else if(sDate>noonDate){
-                            speech = 'As per your Google Calendar, you have '+event.summary+' from '+startTime+' to '+endTime+'. Would you like to pay 3 Pounds extra for guaranteed delivery by tomorrow 12 noon?'
+                            speech = 'As per your Google Calendar, you have '+event.summary+' from '+startTime+' to '+endTime+'. Would you like to pay 3 Dollars extra for guaranteed delivery by tomorrow 12 noon?'
                             responseToAPI(speech);
                         }
                         else{
