@@ -14,7 +14,7 @@ exports.orderDb = [
         quantity: '2'
       }
     ],
-    orderPlacementDate: 'February 3, 2018',
+    orderPlacementDate: 'March 2, 2018',
     value: '20 $',
     status: 'closed',
     shipped: 'false',
@@ -34,7 +34,7 @@ exports.orderDb = [
         quantity: '1'
       }
     ],
-    orderPlacementDate: 'February 4, 2018',
+    orderPlacementDate: 'March 3, 2018',
     value: '35 $',
     status: 'closed',
     shipped: 'false',
@@ -49,7 +49,7 @@ exports.orderDb = [
         quantity: '3'
       }
     ],
-    orderPlacementDate: 'February 5, 2018',
+    orderPlacementDate: 'March 3, 2018',
     value: '15 $',
     status: 'closed',
     shipped: 'false',
@@ -64,7 +64,7 @@ exports.orderDb = [
         quantity: '4'
       }
     ],
-    orderPlacementDate: 'February 6, 2018',
+    orderPlacementDate: 'March 4, 2018',
     value: '40 $',
     status: 'open',
     shipped: 'true',
@@ -89,7 +89,7 @@ exports.orderDb = [
         quantity: '5'
       }
     ],
-    orderPlacementDate: 'February 7, 2018',
+    orderPlacementDate: 'March 5, 2018',
     value: '90 $',
     status: 'open',
     shipped: 'false',
