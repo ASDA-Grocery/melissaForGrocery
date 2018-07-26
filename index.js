@@ -34,7 +34,7 @@ app.post('/enquireOrder', function(req, res) {
       , intent = req.body.result && req.body.result.metadata.intentName ? req.body.result.metadata.intentName : "noIntent"
       , contexts =  req.body.result && req.body.result.contexts ? req.body.result.contexts : "noContexts"
 //       , accessToken = req.body.originalRequest.data.user.accessToken ? req.body.originalRequest.data.user.accessToken : 'noAccessToken';
-    console.log('userId - > ',req.body.originalRequest.data.user)
+//     console.log('userId - > ',req.body.originalRequest.data.user)
     console.log('intent - > ', intent);
     console.log('req.body: ', req.body);
     console.log('contexts - > ', contexts);
