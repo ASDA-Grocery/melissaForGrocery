@@ -158,7 +158,7 @@ app.post('/enquireOrder', function(req, res) {
               orderCost =  orderCost.substr(2, orderCost.length)
               orderCost = orderCost + ' ₹'
             }
-
+            consol.log('New Order Cost: ', orderCost)
             for(var i = 0; i < orderData.orderDb.length; i++){
               if(orderData.orderDb[i].value === orderCost){
                 var deliveryTimeRem = (orderData.orderDb[i].deliveryTime - new Date())/60000;
