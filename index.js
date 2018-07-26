@@ -144,19 +144,19 @@ app.post('/enquireOrder', function(req, res) {
           else{
             var orderCounter = 0;
             var result;
-            if(orderCost.indexOf('dollars') !== -1)
+            if(orderCost.indexOf('rupees') !== -1)
             {
-              result = orderCost.replace("dollars", "$");
+              result = orderCost.replace("rupees", "₹");
               orderCost = result;
             }
-            else if(orderCost.indexOf('dollar') !== -1 ){
-              result = orderCost.replace("dollar", "$");
+            else if(orderCost.indexOf('rupee') !== -1 ){
+              result = orderCost.replace("rupee", "₹");
               orderCost = result;
             }
 
-            if(orderCost.indexOf('$') == 0){
+            if(orderCost.indexOf('₹') == 0){
               orderCost =  orderCost.substr(2, orderCost.length)
-              orderCost = orderCost + ' $'
+              orderCost = orderCost + ' ₹'
             }
 
             for(var i = 0; i < orderData.orderDb.length; i++){
