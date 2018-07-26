@@ -149,8 +149,17 @@ app.post('/enquireOrder', function(req, res) {
               result = orderCost.replace("rupees", "₹");
               orderCost = result;
             }
+            else if(orderCost.indexOf('Rupees') !== -1)
+            {
+              result = orderCost.replace("Rupees", "₹");
+              orderCost = result;
+            }
             else if(orderCost.indexOf('rupee') !== -1 ){
               result = orderCost.replace("rupee", "₹");
+              orderCost = result;
+            }
+            else if(orderCost.indexOf('Rupee') !== -1 ){
+              result = orderCost.replace("Rupee", "₹");
               orderCost = result;
             }
 
