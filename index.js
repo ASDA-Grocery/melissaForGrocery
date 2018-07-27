@@ -526,7 +526,7 @@ app.post('/enquireOrder', function(req, res) {
                       , endTime = eTime.substring(0,5)+" "+eTime.substring(8)
                     if(req.body.result.parameters.timeSlabOccurance=='before'||req.body.result.parameters.timeSlab1=='noon'||req.body.result.parameters.timeSlab1=='morning'){
                         if(sDate<=noonDate){
-                            speech = 'As per your Google Calendar, you have '+event.summary+' from '+startTime+' to '+endTime+'. Would you like to pay 3 Dollars extra for guaranteed delivery by tomorrow 9 AM?'
+                            speech = 'As per your Google Calendar, you have '+event.summary+' from '+startTime+' to '+endTime+'. Would you like to pay ₹ 30 extra for guaranteed delivery by tomorrow 9 AM?'
                             responseToAPI(speech);
                         }
                         else if(sDate>noonDate){
@@ -534,7 +534,7 @@ app.post('/enquireOrder', function(req, res) {
                             responseToAPI(speech);
                         }
                         else{
-                            speech = 'As per your Google Calendar, you have '+event.summary+' from '+startTime+' to '+endTime+'. Would you like to pay 3 Dollars extra for guaranteed delivery by tomorrow 9 AM?'
+                            speech = 'As per your Google Calendar, you have '+event.summary+' from '+startTime+' to '+endTime+'. Would you like to pay ₹ 30 extra for guaranteed delivery by tomorrow 9 AM?'
                             responseToAPI(speech);
                         }
                     }
@@ -544,7 +544,7 @@ app.post('/enquireOrder', function(req, res) {
                             responseToAPI(speech);
                         }
                         else if(sDate>noonDate){
-                            speech = 'As per your Google Calendar, you have '+event.summary+' from '+startTime+' to '+endTime+'. Would you like to pay 3 Dollars extra for guaranteed delivery by tomorrow 12 noon?'
+                            speech = 'As per your Google Calendar, you have '+event.summary+' from '+startTime+' to '+endTime+'. Would you like to pay ₹ 30 extra for guaranteed delivery by tomorrow 12 noon?'
                             responseToAPI(speech);
                         }
                         else{
