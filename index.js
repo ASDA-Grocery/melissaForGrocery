@@ -11,13 +11,13 @@ var orderData = require('./orderDb.js')
   , customerData = require('./customerList.js')
   , openNotificationsData = require('./openNotifications.js');
 
-const google = require('googleapis')
-    , calendar = google.calendar('v3')
-    , OAuth2 = google.auth.OAuth2
-    , clientId = '357369265143-8j0kor1bbl87h7houkt5qbt76r9keg5l.apps.googleusercontent.com'
-    , clientSecret = 'E047ajWFZ5MiobPR_7WRrvXx'
-    , redirect = 'https://oauth-redirect.googleusercontent.com/r/groceryapp-b4d9c'
-    , oauth2Client = new OAuth2(clientId, clientSecret, redirect);
+// const google = require('googleapis')
+//     , calendar = google.calendar('v3')
+//     , OAuth2 = google.auth.OAuth2
+//     , clientId = '357369265143-8j0kor1bbl87h7houkt5qbt76r9keg5l.apps.googleusercontent.com'
+//     , clientSecret = 'E047ajWFZ5MiobPR_7WRrvXx'
+//     , redirect = 'https://oauth-redirect.googleusercontent.com/r/groceryapp-b4d9c'
+//     , oauth2Client = new OAuth2(clientId, clientSecret, redirect);
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -33,23 +33,23 @@ app.post('/enquireOrder', function(req, res) {
       , contextOut
       , intent = req.body.result && req.body.result.metadata.intentName ? req.body.result.metadata.intentName : "noIntent"
       , contexts =  req.body.result && req.body.result.contexts ? req.body.result.contexts : "noContexts"
-      , accessToken = req.body.originalRequest.data.user.accessToken ? req.body.originalRequest.data.user.accessToken : 'noAccessToken';
-    console.log('userId - > ',req.body.originalRequest.data.user)
+//       , accessToken = req.body.originalRequest.data.user.accessToken ? req.body.originalRequest.data.user.accessToken : 'noAccessToken';
+//     console.log('userId - > ',req.body.originalRequest.data.user)
     console.log('intent - > ', intent);
     console.log('req.body: ', req.body);
     console.log('contexts - > ', contexts);
-    if(accessToken === 'noAccessToken'){
-        speech = 'Please Login to you google account';
-         responseToAPI(speech);
-    }
-//     if(1 == 2){
+//     if(accessToken === 'noAccessToken'){
 //         speech = 'Please Login to you google account';
+//          responseToAPI(speech);
 //     }
+    if(1 == 2){
+        speech = 'Please Login to you google account';
+    }
     else {
-        oauth2Client.setCredentials({
-          access_token:accessToken
-        });
-        console.log('access token --> ', accessToken)
+//         oauth2Client.setCredentials({
+//           access_token:accessToken
+//         });
+//         console.log('access token --> ', accessToken)
 
         if(intent === 'checkOrderStatus'){
           console.log('Order Database :', orderData.orderDb);
