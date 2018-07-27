@@ -15,7 +15,7 @@ exports.orderDb = [
       }
     ],
     orderPlacementDate: 'July 21, 2018',
-    value: '20 ₹',
+    value: '200 ₹',
     status: 'closed',
     shipped: 'false',
     deliveryTime: getOrderTime(30)
@@ -35,7 +35,7 @@ exports.orderDb = [
       }
     ],
     orderPlacementDate: 'July 23, 2018',
-    value: '35 ₹',
+    value: '350 ₹',
     status: 'closed',
     shipped: 'false',
     deliveryTime: getOrderTime(40)
@@ -50,7 +50,7 @@ exports.orderDb = [
       }
     ],
     orderPlacementDate: 'July 24, 2018',
-    value: '15 ₹',
+    value: '150 ₹',
     status: 'closed',
     shipped: 'false',
     deliveryTime: getOrderTime(25)
@@ -65,7 +65,7 @@ exports.orderDb = [
       }
     ],
     orderPlacementDate: 'July 24, 2018',
-    value: '40 ₹',
+    value: '400 ₹',
     status: 'open',
     shipped: 'true',
     deliveryTime: getOrderTime(30)
@@ -90,7 +90,7 @@ exports.orderDb = [
       }
     ],
     orderPlacementDate: 'July 25, 2018',
-    value: '90 ₹',
+    value: '900 ₹',
     status: 'open',
     shipped: 'false',
     deliveryTime: getOrderTime(50)
